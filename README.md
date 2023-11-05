@@ -1,16 +1,3 @@
 # riverpod_code_hooks
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Riverpod 2.0버젼 출시 이후 권장되고 있는 Code generation을 적용하고 기존 코드를 마이그레이션하는 방법에 대한 스터디 프로젝트
