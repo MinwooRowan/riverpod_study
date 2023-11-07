@@ -11,11 +11,6 @@ class HooksUseAnimationControllerScreen extends HookConsumerWidget {
     final animationController =
         useAnimationController(duration: const Duration(seconds: 1));
 
-    useEffect(() {
-      animationController.forward();
-      return animationController.dispose; // Unmount될 때 컨트롤러를 정리합니다.
-    }, const []);
-
     return Scaffold(
       appBar: AppBar(
         title: const Text('Hooks use AnimationController Screen'),
