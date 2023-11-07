@@ -5,6 +5,9 @@ import 'package:riverpod_code_hooks/view/delayed_screen.dart';
 import 'package:riverpod_code_hooks/view/future_keep_alive_screen.dart';
 import 'package:riverpod_code_hooks/view/future_screen.dart';
 import 'package:riverpod_code_hooks/view/home_screen.dart';
+import 'package:riverpod_code_hooks/view/hooks/hooks_use_state_screen.dart';
+import 'package:riverpod_code_hooks/view/hooks/hooks_home_screen.dart';
+import 'package:riverpod_code_hooks/view/hooks/hooks_user_animation_controller.dart';
 import 'package:riverpod_code_hooks/view/pass_argument_screen.dart';
 import 'package:riverpod_code_hooks/view/state_screen.dart';
 
@@ -21,6 +24,35 @@ final routerProvider = Provider<GoRouter>((ref) {
           child: const HomeScreen(),
         ),
         routes: [
+          GoRoute(
+            path: HooksHomeScreen.route,
+            name: HooksHomeScreen.route,
+            pageBuilder: (context, state) => buildWithFadetTransition(
+              context: context,
+              state: state,
+              child: const HooksHomeScreen(),
+            ),
+            routes: [
+              GoRoute(
+                path: HooksUseStateScreen.route,
+                name: HooksUseStateScreen.route,
+                pageBuilder: (context, state) => buildWithFadetTransition(
+                  context: context,
+                  state: state,
+                  child: const HooksUseStateScreen(),
+                ),
+              ),
+              GoRoute(
+                path: HooksUseAnimationControllerScreen.route,
+                name: HooksUseAnimationControllerScreen.route,
+                pageBuilder: (context, state) => buildWithFadetTransition(
+                  context: context,
+                  state: state,
+                  child: const HooksUseAnimationControllerScreen(),
+                ),
+              ),
+            ],
+          ),
           GoRoute(
             path: StateScreen.route,
             name: StateScreen.route,

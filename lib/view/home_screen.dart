@@ -5,6 +5,7 @@ import 'package:riverpod_code_hooks/provider/user_name_provider.dart';
 import 'package:riverpod_code_hooks/view/delayed_screen.dart';
 import 'package:riverpod_code_hooks/view/future_keep_alive_screen.dart';
 import 'package:riverpod_code_hooks/view/future_screen.dart';
+import 'package:riverpod_code_hooks/view/hooks/hooks_home_screen.dart';
 import 'package:riverpod_code_hooks/view/pass_argument_screen.dart';
 import 'package:riverpod_code_hooks/view/state_screen.dart';
 
@@ -21,7 +22,7 @@ class HomeScreen extends HookConsumerWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('User Name : ${ref.watch(userNameProvider)}'),
-            const SizedBox(height: 40),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 context.pushNamed(StateScreen.route);
@@ -51,6 +52,13 @@ class HomeScreen extends HookConsumerWidget {
                 context.pushNamed(PassArgumentScreen.route);
               },
               child: const Text('PassArgument Provider'),
+            ),
+            const SizedBox(height: 40),
+            ElevatedButton(
+              onPressed: () {
+                context.pushNamed(HooksHomeScreen.route);
+              },
+              child: const Text('Hooks Screens'),
             ),
           ],
         ),
