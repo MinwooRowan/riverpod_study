@@ -6,7 +6,7 @@ part of 'future_keep_alive_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$getTeamNameHash() => r'83b76de7649efaab17c5bfeb99392bedc346f233';
+String _$getTeamNameHash() => r'66c699ece0d4aa261b8cc2a31c9183ac1ec0c632';
 
 /// See also [GetTeamName].
 @ProviderFor(GetTeamName)

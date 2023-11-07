@@ -13,3 +13,8 @@ class UserName extends _$UserName {
     state = newUserName;
   }
 }
+
+@riverpod
+String user(UserRef ref) {
+  return 'minwoo';
+}

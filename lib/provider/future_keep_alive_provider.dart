@@ -1,5 +1,4 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-
 part 'future_keep_alive_provider.g.dart';
 
 // @Riverpod(keepAlive: true)
@@ -11,10 +10,8 @@ part 'future_keep_alive_provider.g.dart';
 @Riverpod(keepAlive: true)
 class GetTeamName extends _$GetTeamName {
   @override
-  FutureOr<String> build() async {
-    state = const AsyncValue.loading();
+  Future<String> build() async {
     await Future.delayed(const Duration(seconds: 2));
-    state = const AsyncValue.data('Client');
-    return 'Client';
+    return Future.value('Client');
   }
 }
